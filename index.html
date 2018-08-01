@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Online Registration</title>
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <header>
-      <div class="wrapper">
-        <h1>The Code Review</h1>
-      </div>
+      <h1>The Code Review</h1>
     </header>
 
     <div class="container">
@@ -20,56 +19,91 @@
         <p>Get the latest news on how your code is doing right in your inbox</p>
       </main>
 
-      <form class="registration-form" action="index.html" method="post">
+      <div class="form-container">
+        <form class="registration-form" action="index.html" method="post">
 
-        <fieldset class="contact col">
-          <h2>Contact Information</h2>
-          <label for="name">Full Name </label>
-          <input type="text" name="user-name" id="name" placeholder="Required" required>
-          <label for="email">Email Address </label>
-          <input type="email" name="user-email" id="email" placeholder="Required" required>
-          <label for="phone">Phone Number </label>
-          <input type="number" name="user-phone" id="phone" placeholder="Phone Number">
-          <label for="home">Street Address </label>
-          <input type="text" name="user-home" id="home" placeholder="Stree Address">
-          <label for="city">City </label>
-          <input type="text" name="user-city" id="city" placeholder="City">
-          <label for="state">State </label>
-          <select style="color: #949494" name="user-state" id="state">
-            <option style="color: #4e4e4e" selected disabled hidden>Choose a State...</option>
-            <option value="Washington">Washington</option>
-            <option value="Oregon">Oregon</option>
-            <option value="Florida">Florida</option>
-          </select>
-          <label for="Zip">Zip </label>
-          <input type="number" name="user-zip" id="zip" placeholder="Zip">
+          <fieldset class="contact">
 
-        </fieldset>
+            <legend>Contact Information</legend>
 
-        <fieldset class="newsletter col">
-          <h2>Newsletter</h2>
-          <p>Select the newsletters you would like to receive</p>
-          <input type="checkbox" name="user-html-news" id="html-news">
-          <label for="html-news">HTML News</label><br>
-          <input type="checkbox" name="user-css-news" id="css-news">
-          <label for="css-news">CSS News</label><br>
-          <input type="checkbox" name="user-javascript-news" id="javascript-news">
-          <label for="javascript-news">Javascript News</label>
+            <div class="contact-container col">
+              <div class="flex-name flex">
+                <label for="name">Full Name </label>
+                <input type="text" name="user-name" id="name" placeholder="Required" required>
+              </div>
+              <div class="flex-email flex">
+                <label for="email">Email Address </label>
+                <input type="email" name="user-email" id="email" placeholder="Required" required>
+              </div>
+              <div class="flex-phone flex">
+                <label for="phone">Phone Number </label>
+                <input type="number" name="user-phone" id="phone" placeholder="Phone Number">
+              </div>
+              <div class="flex-home flex">
+                <label for="home">Street Address </label>
+                <input type="text" name="user-home" id="home" placeholder="Stree Address">
+              </div>
+              <div class="flex-city flex">
+                <label for="city">City </label>
+                <input type="text" name="user-city" id="city" placeholder="City">
+              </div>
+              <div class="flex-state flex">
+                <label for="state">State </label>
+                <select style="color: #949494" name="user-state" id="state">
+                  <option style="color: #4e4e4e" selected disabled hidden>Choose a State...</option>
+                  <option value="Washington">Washington</option>
+                  <option value="Oregon">Oregon</option>
+                  <option value="Florida">Florida</option>
+                </select>
+              </div>
+              <div class="flex-zip flex">
+                <label for="Zip">Zip </label>
+                <input type="number" name="user-zip" id="zip" placeholder="Zip">
+              </div>
+            </div>
+          </fieldset>
 
-          <p>Newsletter Format</p>
-          <input type="radio" name="format" id="html" value="html">
-          <label for="html">HTML</label><br>
-          <input type="radio" name="format" id="plain" value="plain">
-          <label for="plain">Plain text</label>
+          <fieldset class="newsletter">
 
-          <p>Other topics you'd like to hear about</p>
-          <textarea name="user-topics" id="topics" placeholder="Document your topics here"></textarea>
+            <legend>Newsletter</legend>
 
-        </fieldset>
+            <p>Select the newsletters you would like to receive</p>
+            <div class="newsletter-container col">
+              <div class="flex-html flex">
+                <input type="checkbox" name="user-html-news" id="html-news">
+                <label for="html-news">HTML News</label>
+              </div>
+              <div class="flex-css flex">
+                <input type="checkbox" name="user-css-news" id="css-news">
+                <label for="css-news">CSS News</label>
+              </div>
+              <div class="flex-javascript flex">
+                <input type="checkbox" name="user-javascript-news" id="javascript-news">
+                <label for="javascript-news">Javascript News</label>
+              </div>
+            </div>
 
-        <button type="submit">Sign Up</button>
+            <p>Newsletter Format</p>
+            <div class="format-container col">
+              <div class="flex-forhtml flex">
+                <input type="radio" name="format" id="html" value="html">
+                <label for="html">HTML</label>
+              </div>
+              <div class="flex-forplain flex">
+                <input type="radio" name="format" id="plain" value="plain">
+                <label for="plain">Plain text</label>
+              </div>
+            </div>
 
-      </form>
+            <p>Other topics you'd like to hear about</p>
+            <textarea rows="3" name="user-topics" id="topics" placeholder="Document your topics here"></textarea>
+
+          </fieldset>
+
+          <button type="submit">Sign Up</button>
+
+        </form>
+      </div>
     </div>
 
     <footer>
