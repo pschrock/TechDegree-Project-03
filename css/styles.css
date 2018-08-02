@@ -67,6 +67,10 @@ textarea {
 
 /* *****style***** */
 
+:focus {
+  outline-color: #00abff;
+}
+
 .contact input,
 .contact select,
 textarea {
