@@ -10,11 +10,10 @@ body {
 fieldset {
   border: none;
   padding: 0 0 25px;
-  margin: 0 0 25px;
 }
 
 header h1 {
-  background: #232323;
+  background: #0c1d32;
   color: lightgray;
   margin: 0;
   padding-top: 25px;
@@ -37,8 +36,14 @@ footer p {
 }
 
 .container {
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+main,
+.background-container {
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .newsletter label {
@@ -68,8 +73,10 @@ textarea {
 /* *****style***** */
 
 :focus {
-  outline-color: #00abff;
+  outline-color: #265797;
 }
+
+
 
 .contact input,
 .contact select,
@@ -79,6 +86,24 @@ textarea {
   border-radius: 5px;
   font-size: 1.3em;
   padding: 15px;
+  transition: background 1s ease-in-out;
+}
+
+.contact input:focus,
+.contact select:focus,
+textarea:focus {
+  background: #265797;
+}
+
+hr {
+  border-top: 3px solid;
+  margin-top: 3px;
+}
+
+.background-container {
+  background: #8cbdfd;
+  border-radius: 5px;
+  margin-bottom: 8px;
 }
 
 .news-container > label,
@@ -106,16 +131,6 @@ footer p {
 
 main {
   border-bottom: 6px solid;
-}
-
-form {
-  margin-top: 3px;
-  border-top: 3px solid;
-}
-
-.contact {
-  margin-bottom: 3px;
-  border-bottom: 3px solid;
 }
 
 .news-container {
@@ -165,6 +180,14 @@ textarea {
   .container {
     max-width: 768px;
     margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  main,
+  .background-container {
+    padding-left: 2em;
+    padding-right: 2em;
   }
 
   .flex-contact > label,
